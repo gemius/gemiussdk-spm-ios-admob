@@ -1,0 +1,9 @@
+# OS X
+.DS_Store
+
+# SwiftPM
+.build/
+DerivedData/
+Package.resolved
+Packages
+xcuserdata

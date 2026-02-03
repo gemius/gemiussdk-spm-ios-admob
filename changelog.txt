@@ -1,0 +1,371 @@
+Changelog for GemiusSDK iOS:
+
+VERSION 2.3.0
+Build date: 02.02.2026
+
+Changes:
+- Added support for _app_minapi parameter reporting
+- Added support for TCF 2.3 version when using mobile CMP SDKs
+- Added support for semantic versioning when integrating via SwiftPM
+- Setting -ObjC flag when integrating is no longer necessary
+- Updated Google Mobile Ads dependency to version 12.14.0
+
+--------------------------------------------------------------------------------
+
+VERSION 2.2.0
+Build date: 21.07.2025
+
+Changes:
+- Added new dataProcessingConsentSource property, allowing specification of the consent source used for data
+  processing (Manual, CMP, or TC String)
+- Added support for manual setting of the IAB-compatible TC String
+- Removed the useCMP property introduced in the previous version (replaced with dataProcessingConsentSource)
+- Added device model information to User Agent strings
+- Added reporting of user-visible app name
+- Updated SDK's logging mechanism to use os_log
+- Updated Google Mobile Ads dependency to version 12.7.0
+- Added new GemiusSdkSample sample app illustrating SDK usage with SwiftUI and SPM
+
+--------------------------------------------------------------------------------
+
+VERSION 2.1.0
+Build date: 08.01.2025
+
+Changes:
+- Added support for iAB TCF 2.2
+- Timestamps are being sent with every hit
+- Methods addExtraParameter and setExtraParameters from BaseEvent class check for nil values and log errors when appropriate
+- Updated GoogleMobileAds dependency to 11.13.0 version
+
+--------------------------------------------------------------------------------
+
+VERSION 2.0.6
+Build date: 06.05.2024
+
+Changes:
+- Added new default hit parameters indicating the SDK version and the app version
+- Added the Privacy Manifest according to Apple’s requirements
+- Changed framework integration method to Embed & Sign
+- Raised the deployment target to iOS 12 (as supported by Xcode)
+
+--------------------------------------------------------------------------------
+
+VERSION 2.0.5
+Build date: 10.11.2023
+
+Changes:
+- User agent for WebView now contains applicationId (bundle Id)
+- Raised deployment target to iOS 11 (as supported by Xcode)
+- Documentation updates
+
+--------------------------------------------------------------------------------
+
+VERSION 2.0.4
+Build date: 12.04.2023
+
+Fixes:
+- Fixed memory leak when stream player is orphaned without sending the STOP event
+
+Changes:
+- Improved logging of sent events
+- Improved logging of cookie store status
+- Updated algorithm for calculating _SBT hit parameter
+- Disabled bitcode as deprecated by Apple
+- Documentation updates
+
+--------------------------------------------------------------------------------
+
+VERSION 2.0.3
+Build date: 27.04.2022
+
+Changes:
+- Ignoring fractional part of offset/duration params for Stream events
+- Updated AdMob libraries to 8.9.0 version
+- New unified documentation for all SDK modules
+- Reporting app bundle id with Audience hits
+
+--------------------------------------------------------------------------------
+
+VERSION 2.0.2
+Build date: 06.06.2021
+
+Changes:
+- Cookie storage separated from the shared app storage
+
+--------------------------------------------------------------------------------
+
+VERSION 2.0.1
+Build date: 31.03.2021
+
+Changes:
+- Added new properties to specify adDuartion, programDuration and custom parameters with event attributes in the Stream module
+- Changed persistent files location from Documents to Caches folder, old files will be moved to the new location automatically
+
+--------------------------------------------------------------------------------
+
+VERSION 1.9.6
+Build date: 04.03.2021
+
+Changes:
+ - Added IDFACollectionEnabled property to control IDFA collection
+ - Added support for optional linking of AdSupport.framework
+
+--------------------------------------------------------------------------------
+
+VERSION 1.9.5
+Build date: 24.02.2021
+
+Changes:
+ - GemiusSDK distribution format changed to .xcframework
+ - Millisecond timestamp added to Audience hits
+ - Added _sendHit function to AdOcean's MRAID interface, removed obsolete cookie sync mechanism
+ - Using Identifier for vendor in addition to IDFA
+ - Updated User Agent format, removed obsolete extraction method
+
+--------------------------------------------------------------------------------
+
+VERSION 1.9.4
+Build date: 16.07.2020
+
+Changes:
+ - AdMob frameworks updated to latest version: 7.62.0
+
+--------------------------------------------------------------------------------
+
+VERSION 1.9.3
+Build date: 03.07.2020
+
+Fixes:
+ - Fixed bug with AdOcean hits not being sent in some cases
+
+--------------------------------------------------------------------------------
+
+VERSION 1.9.2
+Build date: 30.06.2020
+
+Fixes:
+ - Fixed possible crash when extracting the user agent string during the first call to config classes
+
+--------------------------------------------------------------------------------
+
+VERSION 1.9.1
+Build date: 14.05.2020
+
+Changes:
+ - Stream AdData: adFormat parameter added
+ - Stream AdData: adType enum updated
+ - Stream ProgramData: programGenre enum updated
+
+--------------------------------------------------------------------------------
+
+VERSION 1.9.0
+Build date: 04.05.2020
+
+Changes:
+ - Added new program parameters in Stream module
+Fixes:
+- Added timeout when extracting User Agent string
+
+--------------------------------------------------------------------------------
+
+VERSION 1.8.1
+Build date: 10.12.2019
+
+Fixes:
+- Fixed error with WKWebView not sending cookies with initial request
+
+--------------------------------------------------------------------------------
+
+VERSION 1.8.0
+Build date: 06.12.2019
+
+Changes:
+- Using WKWebView instead of UIWebView to display ad banners
+- Updated AdOcean sample apps
+- Added optimalSize property to ad banners to report native size of received ad
+- Removed special banner layout behavior when initial frame was set to zero rectangle
+
+Fixes:
+- Resolved layout issues with ad banners
+- Fixed broken ad banner initializers
+
+--------------------------------------------------------------------------------
+
+VERSION 1.7.0 rev. 1
+Build date: 20.11.2019
+
+Changes:
+- Fixed incorrect version number returned by SDK
+
+--------------------------------------------------------------------------------
+
+VERSION 1.7.0
+Build date: 30.09.2019
+
+Changes:
+- Google AdMob called from AdOcean response
+- Fix for lack of bitcode for GemiusSDKtvOS.framework
+
+--------------------------------------------------------------------------------
+
+VERSION 1.6.1
+Build date: 12.09.2019
+
+Changes:
+- Added DevicePixelRatio parameter to hits
+- Fixed crash when calling isViewable mraid function
+
+--------------------------------------------------------------------------------
+
+VERSION 1.6.0
+Build date: 22.07.2019
+
+Changes:
+- Added support for displaying ads with Google Ads SDK
+
+--------------------------------------------------------------------------------
+
+VERSION 1.5.2
+Build date: 28.06.2019
+
+Changes:
+- Added support for tvOS 12.0+ for Audience and Stream modules
+
+--------------------------------------------------------------------------------
+
+VERSION 1.5.1
+Build date: 09.05.2019
+
+Changes:
+- improved cookie sharing between WebView and GemiusSDK
+- removed obsolete oldCookiePath property from GEMConfig class
+
+--------------------------------------------------------------------------------
+
+VERSION 1.5.0
+Build date: 18.04.2019
+
+Changes:
+- added new transmission property to GSMProgramData and GSMAdData objects in Stream module
+- existing duration property of GSMProgramData and GSMAdData was explicitly marked optional
+
+--------------------------------------------------------------------------------
+
+VERSION 1.4.0
+Build date: 26.03.2019
+
+Changes:
+- HTTP traffic and WebView now share cookies
+
+--------------------------------------------------------------------------------
+
+VERSION 1.3.4
+Build date: 17.09.2018
+
+Fixes:
+- fixed error preventig injection of MRAID script when baseUrl is used
+
+--------------------------------------------------------------------------------
+
+VERSION 1.3.3 
+Build date: 05.07.2018
+
+Fixes:
+- fixed transparent background of full screen ad on iPhone X
+
+- fixed display of full screen ad in case when FullScreenAd object wasn't retained by the app after calling load or open.
+
+Changes:
+- added property GEMAdOceanConfig.baseUrl allowing to set base URL for requests performed in WebView in which ad is displayed
+
+- GDPR compliance - extended effect of setCookiesAllowed:NO. Please see documentation for details on GDPR required consent. 
+
+--------------------------------------------------------------------------------
+
+VERSION 1.3.2 
+Build date: 09.05.2018
+
+Fixes:
+- fixed memory leaks for AdOcean module
+
+Changes:
+- support for iPhone X - FullScreenAd frame moved down and decreased height to exclude the 
+notch
+
+- iOS 7.0 is no longer supported due to abandoned support by Xcode 
+
+--------------------------------------------------------------------------------
+
+VERSION 1.3.1 
+Build date: 26.01.2018
+
+Fixes:
+- fixed crash happening in some cases on SDK initialization when using Audience power saving feature
+
+- removed build warnings by removing unnecessary debug symbols for x86_64 and i386 architectures (iOS simulator). Reduced size of the framework.
+
+--------------------------------------------------------------------------------
+
+VERSION 1.3.0 
+Build date: 24.01.2018
+
+- official support for iOS 11 (tested up to 11.2) (previous SDK versions should be compatible too, but only this one was fully tested on the new OS)
+
+Fixes:
+- fixed memory leak for AdOcean
+
+Changes:
+- added original WebView client name (typically "Mozilla/5.0") in front of User-Agent returned by getUA4WebView(). For wider compatibility, for example fixes problem with "login with Facebook".
+
+- added onContentReady() callback, informing when static contents of an ad (HTML5, images, GIFs) have been loaded. Useful for preloading billboard ads in the background. See documentation for details.
+
+- more verbose logging of Audience requests errors.
+
+--------------------------------------------------------------------------------
+
+VERSION 1.2.9
+Build date: 27.11.2017
+
+Fixes:
+- fixed mraid.js not working inside iframe
+
+Changes:
+- added support for HTML5 inline video playback
+
+--------------------------------------------------------------------------------
+
+VERSION 1.2.8
+Build date: 08.06.2017
+
+Fixes:
+- problem with billboard autoresize - allowing to change frame size after initialization
+
+05.10.2017 - no changes for SDK framework, but added some extras to the release package:
+- added WebViewUAExample project, added guide for using getUA4WebView method
+- new paragraph in documentation describing "typology" parameter
+
+--------------------------------------------------------------------------------
+
+VERSION 1.2.7
+Build date: 12.04.2017
+
+Fixes:
+- fixed crash when BillboardAd view is attached without setting placementID
+
+Changes:
+- additional data validations for Stream hits, protecting from sending invalid ones
+
+Documentation changes:
+- documentation update regarding partial- and full- page view for Audience hits
+
+--------------------------------------------------------------------------------
+
+VERSION 1.2.6
+Build date: 16.01.2017
+
+Changes:
+- DeviceUID (Google Advertising ID for Android, IDFA for iOS) appended to User-Agent returned by getUA4WebView() method
+- changed AdOcean Demo application default placement IDs
+
+Documentation changes:
+- changed hostname in samples
