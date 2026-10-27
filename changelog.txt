@@ -1,5 +1,17 @@
 Changelog for GemiusSDK iOS:
 
+VERSION 2.5.0
+Build date: 16.10.2026
+
+Changes:
+- Fixed stream continue event reporting for duplicated program id
+- Updated docs with Swift listings
+- Improved debug logs for CMP mode
+- Added support for Gfk panelist routers
+- Updated Google Mobile Ads dependency to version 13.11.0
+
+--------------------------------------------------------------------------------
+
 VERSION 2.3.0
 Build date: 02.02.2026
 

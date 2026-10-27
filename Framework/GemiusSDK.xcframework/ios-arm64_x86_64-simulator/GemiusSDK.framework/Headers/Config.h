@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 #define GEM_SDK_NAME    @"GemiusSDK"
-#define GEM_SDK_VERSION @"2.3.0"
+#define GEM_SDK_VERSION @"2.5.0"
 
 typedef NS_ENUM(NSUInteger, GEMDataProcessingConsentSource) {
     GEMDataProcessingConsentSourceManual = 0,

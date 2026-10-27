@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "GemiusSDK_iOS_AdMob",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v13)
     ],
     products: [
         .library(
@@ -15,7 +15,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "12.14.0")
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", "12.14.0"..<"14.0.0")
     ],
     targets: [
         .target(
